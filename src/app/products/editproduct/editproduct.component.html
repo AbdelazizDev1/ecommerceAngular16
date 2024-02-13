@@ -1,0 +1,69 @@
+<p>editproduct works!</p>
+<h2>Ajouter un Produit</h2>
+
+<div class="mb-3">
+  <label for="reference" class="form-label">Reference</label>
+  <input
+    type="text"
+    class="form-control"
+    id="reference"
+    placeholder="Reference"
+    name="reference"
+    [(ngModel)]="product.reference"
+  />
+</div>
+<div class="mb-3">
+  <label for="designation" class="form-label">Designation</label>
+  <input
+    type="text"
+    class="form-control"
+    id="designation"
+    placeholder="Designation"
+    name="designation"
+    [(ngModel)]="product.designation"
+  />
+</div>
+<div class="mb-3">
+  <label for="prix" class="form-label">Prix</label>
+  <input type="text" class="form-control" id="prix" placeholder="Prix" name="Prix" [(ngModel)]="product.prix" />
+</div>
+<div class="mb-3">
+  <label for="marque" class="form-label">Marque</label>
+  <input type="text" class="form-control" id="marque" placeholder="marque" name="marque" [(ngModel)]="product.marque" />
+</div>
+<div class="mb-3">
+  <label for="qtestock" class="form-label">Quantite Stock</label>
+  <input
+    type="text"
+    class="form-control"
+    id="qtestock"
+    placeholder="qtestock"
+    name="qtestock"
+    [(ngModel)]="product.qtestock"
+  />
+</div>
+<div class="mb-3">
+  <label for="image" class="form-label">Image</label>
+  <input
+    type="text"
+    class="form-control"
+    id="imageart "
+    placeholder="imageart"
+    name="imageart"
+    [(ngModel)]="product.imageart"
+  />
+</div>
+<div class="mb-3">
+  <label for="scategories" class="form-label">Sous categorie</label>
+  <input
+    type="text"
+    class="form-control"
+    id="scategorieID "
+    placeholder="scategories"
+    name="scategorieID"
+    [(ngModel)]="product.scategorieID"
+  />
+</div>
+<button type="button" class="btn btn-primary" (click)="Sauvgarder()">Enregistrer</button>
+<button type="button" class="btn btn-danger">Annuler</button>
+

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liste des produits  Table ({{productsList.length}})</h1>
+    <button type="button" class="btn btn-primary" routerLink="/products/createProduct">Ajouter</button>
+
+    <table *ngIf = "productsList.length" datatable   class="table table-hover table-striped table-bordered mb-5">
+<!-- <table datatable [dtTrigger]="dtTrigger" [dtOptions]="dtOptions" class="row-border hover"> -->
+
+    <thead>
+
+        <tr>
+            <th>#</th>
+            <th>Image</th>
+            <th>Reference</th>
+            <th>Designation</th>
+            <th>Marque</th>
+            <th>Prix</th>
+            <th>Quantite</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+    
+        </tr>
+    </thead>
+   
+
+
+    <tbody>
+        <tr *ngFor="let product of productsList; index as i ">
+
+            <td class="table-primary" colspan="">{{i+1}}</td>
+            <td> <img src="{{product.imageart}}" alt="" width="80" height="80"></td>
+            <td>{{product.reference}}</td>
+            <td>{{product.designation}}</td>
+            <td>{{product.marque}}</td>
+            <td>{{product.prix}}</td>
+            <td>{{product.qtestock}}</td>
+            <td><button class="btn btn-warning" 
+                class="btn btn-info btn-sm"
+                [routerLink]="['/products/editProduct/',product._id]">Modifier</button></td>
+            <td><button class="btn btn-danger" (click)="deletPro(product._id)">Supprimer</button></td>
+        </tr>
+    </tbody>
+   
+</table>
+</body>
+</html>
+
+

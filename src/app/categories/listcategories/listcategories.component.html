@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liste des Categories ({{listCategories.length}})</h1>
+
+
+
+
+
+<table class=" table table-striped bordered ">
+
+    <thead>
+
+        <tr>
+            <th>Nom Categorie</th>
+            <th>Image</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+            
+    
+        </tr>
+    </thead>
+   
+
+
+    <tbody>
+        <tr *ngFor="let categorie of listCategories ">
+
+
+            <td>{{categorie.nomcategorie}}</td>
+            <td> <img src="{{categorie.imagecategorie}}" alt="" width="100" height="100"></td>
+            <td><button class="btn btn-warning">Modifier</button></td>
+            <td><button class="btn btn-danger">Supprimer</button></td>
+        </tr>
+    </tbody>
+   
+</table>
+</body>
+</html>
+
+
+
